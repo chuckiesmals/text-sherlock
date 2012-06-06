@@ -46,6 +46,9 @@ EXCLUDE_FILE_SUFFIX = None
 # default: None
 INCLUDE_FILE_SUFFIX = None
 
+
+EXCLUDE_DIRECTORY = None
+
 # Number of lines used when displaying the results
 # context per hit. This needs to be one (1) or greater.
 # type: integer

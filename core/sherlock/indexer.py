@@ -192,6 +192,17 @@ class Indexer(object):
             # traverse the given path
             for dirpath, dirnames, filenames in os.walk(dpath):
                 dirname = os.path.basename(dirpath)
+
+                skipDirectory = False
+                if settings.EXCLUDE_DIRECTORY:
+                    for name in settings.EXCLUDE_DIRECTORY:
+                        if name in dirpath:
+                            skipDirectory = True
+                            break
+
+                if skipDirectory:
+                    continue
+
                 # ignore hidden dirs
                 if dirname.startswith('.'):
                     continue
