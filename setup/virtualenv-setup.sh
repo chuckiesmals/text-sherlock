@@ -7,8 +7,8 @@
 # user$: sh ./virtualenv-setup.sh
 
 echo "Setting up virtualenv and pip"
-sudo easy_install pip
-sudo pip install virtualenv
+easy_install pip
+pip install virtualenv
 
 # adjust permission (allow it to be executed)
 chmod +x ../main.py
